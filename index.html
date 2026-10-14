@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>구준모 — Portfolio</title>
+<meta name="description" content="일본 뷰티 시장을 대상으로, 기획부터 편집까지 혼자 만들어온 콘텐츠 마케터 구준모의 포트폴리오." />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- ================================================================
+  ★ 여기만 수정하면 됩니다 ★  (영상 정보 설정)
+
+  video 항목에 영상 주소를 넣으세요.
+  - 유튜브(쇼츠 포함):  "https://youtube.com/shorts/XXXX"
+    → 썸네일이 자동으로 뜨고, 클릭하면 새 탭에서 유튜브가 열립니다.
+  - 썸네일을 직접 고르고 싶으면 thumb 에 캡처 이미지 파일명을 넣으세요.
+    (예: "thumb1.jpg", html 파일과 같은 폴더에 저장)
+  - 아직 없으면:        video: "" 로 두면 자리 표시로 나옵니다.
+
+  ⚠ 주의: body 문단은 한 줄로 쓰세요. 따옴표("...") 안에서 엔터를 치면
+    페이지 전체가 안 나옵니다. 문단을 나누고 싶으면 이렇게:
+      body: [
+        "첫 번째 문단",
+        "두 번째 문단"
+      ],
+================================================================ -->
+<script>
+const WORKS = [
+  {
+    date: "2024.04",
+    title: "야미짱 코팩 릴스",
+    meta: "2024.04 제작 · 자체 기획 프로젝트",
+    role: "기획 · 촬영 · 편집 단독 수행",
+    body: [
+      "개성 있는 모델도, 내세울 뚜렷한 차별점도 없는 조건이었습니다. 그래서 제품 설명 대신 모델에게 춤을 추게 하고, EDM 비트에 타이포그래피를 얹었습니다.",
+      "제품에 대한 관심보다 영상에 대한 관심을 먼저 얻어야 한다고 판단했습니다.",
+      "초기 제작물로, 이후 작업들의 출발점이 된 영상입니다."
+    ],
+    quote: "",
+    video: "https://youtube.com/shorts/xiPYpF5M9bs",
+    thumb: ""
+  },
+  {
+    date: "2026.02",
+    title: "지피덤 셀트리온 EGF 스킨베리어 하이드로 앰플",
+    meta: "2026.02 제작 · 259studio",
+    role: "기획 · 촬영 · 편집 단독 수행 (AI 활용)",
+    body: [
+      "브랜드 요청 카피는 \u201C진정에 좋다는 CICA, 아무리 발라도 이것부터 안 챙기면 소용없다\u201D였습니다. 그대로 넣으면 단순 설명이 된다고 판단해, 시청자의 기본 상식을 부정하는 후킹으로 재구성했습니다.",
+      "브랜드 협의를 거쳐 재구성한 후킹으로 제작했습니다."
+    ],
+    quote: "\u201C민감성 피부에 CICA 바르면 좋아지잖아? (컷 전환) 그거 무리.\u201D",
+    video: "https://youtube.com/shorts/ynVtLmhcscc",
+    thumb: ""
+  },
+  {
+    date: "2026.02",
+    title: "AI 브랜디드 영상",
+    meta: "2026.02 · 자체 기획 프로젝트",
+    role: "기획 · 제작 단독 수행 (AI 활용)",
+    body: [
+      "초반에는 제품을 노출하지 않고 영상의 중독성과 리듬감으로 시선을 붙잡은 뒤, 후반에 제품을 드러내는 형식을 시도했습니다."
+    ],
+    quote: "",
+    video: "https://youtube.com/shorts/pmjSlVXTlwQ",
+    thumb: ""
+  },
+  {
+    date: "2025.04",
+    title: "나우앤댄 헤어오일 + 브러시 기획 세트 브랜디드 영상",
+    meta: "2025.04 · 2인 공동 제작",
+    role: "씬 구성 · 편집, 음원 선정, 톤앤매너 설정 / 촬영: 공동 진행",
+    body: [
+      "화이트를 메인 톤으로 잡고, 밝고 깔끔한 조명으로 촬영했습니다. 바람에 흩날리는 커튼으로 제품보다 청량감을 먼저 전달하고, 중반부에 사용법과 텍스처, 후반부에 가방에서 꺼내 야외에서 쓰는 클로즈업으로 휴대성까지 담았습니다.",
+      "분위기 → 정보 → 라이프스타일 순으로 흐르는 구성입니다."
+    ],
+    quote: "",
+    video: "https://youtube.com/shorts/Br-tyjIwLjs",
+    thumb: ""
+  },
+  {
+    date: "2026.07",                               // ← 제작 시기
+    title: "어성초의 어원",                               // ← 제품명/영상명
+    meta: "2026.07 · 자체 기획 프로젝트",
+    role: "기획 · 제작 단독 수행 (AI 활용)",                                    // ← 본인 역할
+    body: [
+      "틱톡샵에서 판매하기 위한 영상이었지만, 제품부터 보여주지 않았습니다.",
+      "어성초라는 이름의 어원과 그 어원에서 나오는 효능, 과거의 활용법, 그리고 최근 어성초 화장품이 많이 나오는 이유를 먼저 이야기했습니다. 그 후에 어성초만 단독으로 들어간 제품을 소개했습니다."
+    ],
+    quote: "",
+    video: "https://youtube.com/shorts/LWcXQW0FPNQ",
+    thumb: ""
+  }
+];
+
+const PROFILE = {
+  name: "구준모",
+  line1: "일본 뷰티 시장을 대상으로,",
+  line2: "기획부터 편집까지 혼자 만들어온 콘텐츠 마케터입니다.",
+  email: "sliming999@gmail.com",
+  channelLabel: "259studio",
+  channelUrl: "https://www.tiktok.com/@259studio",
+  since: "2024.02 ~ 현재",
+  skills: "기획 · 촬영 · 편집(Premiere Pro, After Effects) · AI 활용 · 광고 집행"
+};
+</script>
+
+<style>
+:root{
+  --ink:#20262B;
+  --mute:#8B959C;
+  --line:#E7EBED;
+  --mist:#F5F7F8;
+  --accent:#50808E;
+  --accent-soft:#EAF1F3;
+  --w:1060px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Malgun Gothic",sans-serif;
+  color:var(--ink);background:#FFFFFF;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.7;
+}
+.mono{font-family:"IBM Plex Mono",monospace;letter-spacing:.08em}
+
+/* ---------- 히어로 ---------- */
+/* 커튼: 화면 전체 폭에 걸린 얇은 커튼의 주름 그림자.
+   색을 얹지 않고 회색 그림자만 아주 옅게 깔아서, 배경 흰색과 따로 놀지 않게 함.
+   위쪽에 매달려 있고 아래로 갈수록 사라짐. 바람에 천천히 흔들림. */
+.hero-wrap{position:relative;overflow:hidden}
+.hero-wrap::before,.hero-wrap::after{
+  content:"";position:absolute;top:-4%;left:-12%;right:-12%;height:104%;
+  pointer-events:none;z-index:0;transform-origin:50% 0;will-change:transform;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.55) 45%,transparent 88%);
+          mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.55) 45%,transparent 88%);
+}
+.hero-wrap::before{ /* 큰 주름 + 아주 고운 입자(색 띠가 계단처럼 보이는 걸 막아줌) */
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .13 0 0 0 0 .15 0 0 0 0 .17 0 0 0 .035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),linear-gradient(90deg,
+    rgba(32,38,43,0) 0%, rgba(32,38,43,.006) 14%, rgba(32,38,43,.018) 30%,
+    rgba(32,38,43,.028) 50%, rgba(32,38,43,.018) 70%, rgba(32,38,43,.006) 86%,
+    rgba(32,38,43,0) 100%);
+  background-size:180px 180px,230px 100%;background-repeat:repeat,repeat-x;
+  animation:sway 12s ease-in-out infinite alternate;
+}
+.hero-wrap::after{ /* 잔주름, 다른 박자로 흔들림 */
+  background-image:linear-gradient(90deg,
+    rgba(32,38,43,0) 0%, rgba(32,38,43,.006) 20%, rgba(32,38,43,.016) 50%,
+    rgba(32,38,43,.006) 80%, rgba(32,38,43,0) 100%);
+  background-size:140px 100%;background-repeat:repeat-x;background-position:60px 0;
+  animation:sway2 17s ease-in-out infinite alternate;
+}
+@keyframes sway{
+  0%  {transform:translateX(0)     scaleX(1)}
+  50% {transform:translateX(30px)  scaleX(1.06)}
+  100%{transform:translateX(-16px) scaleX(.97)}
+}
+@keyframes sway2{
+  0%  {transform:translateX(0)     scaleX(1)}
+  50% {transform:translateX(-24px) scaleX(.95)}
+  100%{transform:translateX(18px)  scaleX(1.04)}
+}
+.hero{
+  min-height:88vh;display:flex;flex-direction:column;justify-content:center;
+  max-width:var(--w);margin:0 auto;padding:48px 28px;position:relative;z-index:1;
+}
+.eyebrow{font-size:12px;font-weight:500;color:var(--mute);margin-bottom:22px}
+.hero h1{
+  font-size:clamp(44px,8vw,84px);font-weight:800;letter-spacing:-.02em;
+  line-height:1.08;margin-bottom:30px;
+}
+.hero .intro{font-size:clamp(16px,2.3vw,21px);font-weight:400;color:var(--ink);max-width:34em}
+.hero .intro strong{font-weight:700}
+.scroll-hint{
+  position:absolute;bottom:34px;left:28px;
+  font-size:11px;color:var(--mute);display:flex;align-items:center;gap:10px;
+}
+.scroll-hint::after{content:"";width:44px;height:1px;background:var(--mute);display:block}
+
+/* 로드 시퀀스 */
+.rise{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.6,.2,1) forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.2s}.d3{animation-delay:.4s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* ---------- 작업 섹션 헤더 ---------- */
+.works-head{max-width:var(--w);margin:0 auto;padding:30px 28px 8px}
+.works-head .label{
+  font-size:12px;color:var(--mute);
+  border-top:1px solid var(--ink);padding-top:12px;
+}
+
+/* ---------- 작업 ---------- */
+.work{
+  max-width:var(--w);margin:0 auto;padding:76px 28px;
+  display:grid;grid-template-columns:minmax(250px,330px) 1fr;gap:60px;
+  align-items:start;
+}
+.work + .work{border-top:1px solid var(--line)}
+
+.frame-wrap{position:sticky;top:44px}
+.frame{
+  position:relative;aspect-ratio:9/16;background:var(--mist);
+  border:1px solid var(--line);border-radius:14px;overflow:hidden;
+}
+.frame iframe,.frame img{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.frame .empty{
+  position:absolute;inset:0;display:flex;flex-direction:column;gap:8px;
+  align-items:center;justify-content:center;color:var(--mute);font-size:13px;text-align:center;padding:20px;
+}
+.reel-link{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:14px;text-decoration:none;z-index:2;
+  background:linear-gradient(180deg,rgba(32,38,43,.18),rgba(32,38,43,.42));
+  transition:background .3s ease;
+}
+.reel-link:hover,.reel-link:focus-visible{background:linear-gradient(180deg,rgba(32,38,43,.30),rgba(32,38,43,.55))}
+.play-dot{
+  width:58px;height:58px;border-radius:50%;
+  background:rgba(255,255,255,.92);position:relative;
+  transition:transform .25s ease;
+}
+.play-dot::after{
+  content:"";position:absolute;top:50%;left:54%;transform:translate(-50%,-50%);
+  border-style:solid;border-width:9px 0 9px 15px;
+  border-color:transparent transparent transparent var(--ink);
+}
+.reel-link:hover .play-dot,.reel-link:focus-visible .play-dot{transform:scale(1.08)}
+.play-txt{
+  background:#fff;color:var(--ink);font-size:13px;font-weight:600;
+  padding:8px 16px;border-radius:999px;
+}
+
+.info .num{font-size:13px;color:var(--accent);margin-bottom:12px}
+.info h2{font-size:clamp(22px,3.2vw,30px);font-weight:700;letter-spacing:-.01em;line-height:1.3;margin-bottom:8px}
+.info .meta{font-size:13.5px;color:var(--mute);margin-bottom:26px}
+.role{
+  display:inline-block;background:var(--accent-soft);color:var(--accent);
+  font-size:13.5px;font-weight:600;border-radius:8px;padding:8px 14px;margin-bottom:26px;line-height:1.6;
+}
+.info p{font-size:15.5px;margin-bottom:16px;max-width:36em}
+.quote{
+  border-left:2px solid var(--accent);padding:2px 0 2px 18px;margin-top:24px;
+  font-size:15.5px;color:var(--accent);font-weight:500;max-width:34em;
+}
+
+/* 스크롤 등장 */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.6,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- 푸터 ---------- */
+footer{border-top:1px solid var(--ink);margin-top:40px}
+.foot-in{max-width:var(--w);margin:0 auto;padding:64px 28px 80px}
+.foot-in .label{font-size:12px;color:var(--mute);margin-bottom:18px}
+.foot-name{font-size:clamp(26px,4vw,38px);font-weight:800;letter-spacing:-.02em;margin-bottom:26px}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 40px}
+.foot-grid .k{font-size:11px;color:var(--mute);margin-bottom:5px}
+.foot-grid .v{font-size:15px}
+.foot-grid a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.foot-grid a:hover{border-bottom-color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* ---------- 모바일 ---------- */
+@media (max-width:760px){
+  .work{grid-template-columns:1fr;gap:34px;padding:56px 22px}
+  .frame-wrap{position:static;max-width:300px}
+  .hero{min-height:76vh;padding:40px 22px}
+  .scroll-hint{left:22px}
+  .works-head{padding:24px 22px 4px}
+  .foot-in{padding:52px 22px 64px}
+}
+@media (prefers-reduced-motion:reduce){
+  .rise,.hero-wrap::before,.hero-wrap::after{animation:none}
+  .rise{opacity:1;transform:none}
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="hero-wrap">
+<header class="hero">
+  <p class="eyebrow mono rise d1">PORTFOLIO</p>
+  <h1 class="rise d2" id="heroName"></h1>
+  <p class="intro rise d3" id="heroIntro"></p>
+  <p class="scroll-hint mono">SCROLL</p>
+</header>
+</div>
+
+<section class="works-head" aria-label="작업">
+  <p class="label mono">WORKS</p>
+</section>
+
+<main id="works"></main>
+
+<footer>
+  <div class="foot-in">
+    <p class="label mono">CONTACT</p>
+    <p class="foot-name" id="footName"></p>
+    <div class="foot-grid" id="footGrid"></div>
+  </div>
+</footer>
+
+<script>
+/* ---------- 렌더링 ---------- */
+const $ = (s,el=document)=>el.querySelector(s);
+
+$("#heroName").textContent = PROFILE.name;
+$("#heroIntro").innerHTML = PROFILE.line1 + "<br><strong>" + PROFILE.line2 + "</strong>";
+$("#footName").textContent = PROFILE.name;
+
+/* 유튜브 주소 → 영상 ID 추출 */
+function ytId(url){
+  const m = url.match(/(?:youtu\.be\/|shorts\/|watch\?v=|embed\/)([\w-]{6,})/);
+  return m ? m[1] : null;
+}
+
+/* 모든 영상을 '썸네일 + 재생 버튼'으로 표시하고, 클릭하면 새 탭에서 원본을 연다.
+   (일부 공개 영상은 페이지 내 삽입 재생이 막히므로 이 방식을 사용) */
+function frameHTML(w){
+  if(!w.video) return `<div class="empty"><span>영상 주소 넣기<br>(video 항목)</span></div>`;
+
+  let img;
+  if(w.thumb){
+    img = `<img src="${w.thumb}" alt="${w.title} 썸네일">`;
+  } else {
+    const id = ytId(w.video);
+    img = id
+      ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="${w.title} 썸네일" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${id}/0.jpg'">`
+      : `<div class="empty"><span>썸네일 이미지 넣기<br>(thumb 항목)</span></div>`;
+  }
+  return img + `<a class="reel-link" href="${w.video}" target="_blank" rel="noopener"><span class="play-dot" aria-hidden="true"></span><span class="play-txt">영상 보기 ↗</span></a>`;
+}
+
+$("#works").innerHTML = WORKS.map((w,i)=>`
+  <article class="work" id="w${i}">
+    <div class="frame-wrap reveal"><div class="frame">${frameHTML(w)}</div></div>
+    <div class="info reveal">
+      <p class="num mono">REEL 0${i+1} — ${w.date}</p>
+      <h2>${w.title}</h2>
+      <p class="meta">${w.meta}</p>
+      <p class="role">역할 — ${w.role}</p>
+      ${w.body.map(p=>`<p>${p}</p>`).join("")}
+      ${w.quote?`<p class="quote">${w.quote}</p>`:""}
+    </div>
+  </article>
+`).join("");
+
+$("#footGrid").innerHTML = `
+  <div><p class="k mono">EMAIL</p><p class="v"><a href="mailto:${PROFILE.email}">${PROFILE.email}</a></p></div>
+  <div><p class="k mono">CHANNEL</p><p class="v">${PROFILE.channelUrl?`<a href="${PROFILE.channelUrl}" target="_blank" rel="noopener">${PROFILE.channelLabel} ↗</a>`:PROFILE.channelLabel} · ${PROFILE.since}</p></div>
+  <div><p class="k mono">SKILLS</p><p class="v">${PROFILE.skills}</p></div>
+`;
+
+/* 스크롤 등장 */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting) e.target.classList.add("in");
+}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
